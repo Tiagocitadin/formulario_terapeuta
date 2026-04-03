@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="quiz">
+
+        <div class="topo">
+            <span onclick="voltar()" style="cursor:pointer">←</span>
+            <span onclick="fechar()" style="cursor:pointer">Fechar</span>
+        </div>
+
+        <div class="barra" id="barra"></div>
+
+        <div id="tela-dados">
+            <img src="img/logo.png" class="foto">
+            <h2 style="margin-top: 20px; margin-bottom: 25px;">Para começar, me conte um pouco sobre você.</h2>
+
+            <input type="text" id="nome" placeholder="Nome" class="input-estilizado">
+            <div id="erro-nome"
+                style="color: #d93025; font-size: 12px; margin: -5px 0 10px 15px; display: none; text-align: left;">
+                ⚠️ O nome é obrigatório.
+            </div>
+
+            <input type="tel" id="telefone" placeholder="Telefone" class="input-estilizado" maxlength="15">
+            <div id="erro-telefone"
+                style="color: #d93025; font-size: 12px; margin: -5px 0 10px 15px; display: none; text-align: left;">
+                ⚠️ Digite o número completo com DDD.
+            </div>
+
+            <input type="email" id="email" placeholder="E-mail (opcional)" class="input-estilizado">
+
+            <button onclick="iniciarQuiz()" style="margin-top: 30px;">Continuar</button>
+        </div>
+
+        <div id="conteudo-quiz" style="display:none;">
+            <img src="img/logo.png" class="foto">
+            <h2 id="pergunta"></h2>
+            <div id="opcoes"></div>
+            <button onclick="proximo()">Continuar</button>
+        </div>
+
+        <div id="tela-final" style="display:none;" class="final-content">
+
+            <h2 class="titulo-atencao">
+                ⚠️ Atenção: Sua sessão <br> <strong>NÃO</strong> está agendada ainda.
+            </h2>
+
+            <div class="texto-final">
+                Para garantir seu horário gratuito na minha agenda, você precisa escolher o dia e a hora no link abaixo
+                agora. Os horários esgotam rápido.
+            </div>
+
+            <button class="btn-agendar" onclick="window.location.href='SEU_LINK_DO_CALENDLY_OU_WHATSAPP'">
+                AGENDAR MEU HORÁRIO!
+            </button>
+
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
